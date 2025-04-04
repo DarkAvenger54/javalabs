@@ -2,10 +2,11 @@ package pl.wit.lab2;
 
 import java.time.LocalDate;
 import java.time.Period;
+import java.util.Arrays;
 
 /**
  * 
- * @author 
+ * @author DarkAvenger54
  *
  */
 public class Presentation {
@@ -23,7 +24,7 @@ public class Presentation {
 	//pole ilosc koleg
 	private short facebookFriendsQuantity;
 	//pole zwiedzonych miejsc
-	private String visitedPlaces[];
+	private String[] visitedPlaces;
 	
 	private Presentation(String firstName,String lastName) {
 		//inicjalizacja imienia i nazwiska
@@ -47,20 +48,90 @@ public class Presentation {
 	
 	public String getBirthdayDateAsString() {
 		//Ręczne zbudowanie Daty w formacie dd.MM.yyyy 
-		
-		return String.valueOf(birthdayDay).concat(".").concat(String.valueOf(birthdayMonth)).concat(".").concat(String.valueOf(birthdayYear));
+		StringBuilder sb = new StringBuilder();
+		if(birthdayDay < 10) {
+			sb.append("0".concat(String.valueOf(birthdayDay)));
+		}
+		else {
+			sb.append(String.valueOf(birthdayDay));
+		}
+		sb.append(".");
+		if(birthdayMonth < 10) {
+			sb.append("0".concat(String.valueOf(birthdayMonth)));
+		}
+		else {
+			sb.append(String.valueOf(birthdayMonth));
+		}
+		sb.append(".");
+		sb.append(birthdayYear);
+		return sb.toString();
 	}
 	
 	public byte getAge() {
 		LocalDate now = LocalDate.now();  
-		LocalDate then = LocalDate.of(birthdayDay, birthdayMonth, birthdayYear);
-		byte years = (byte)Period.between(now, then).getYears();
-		return years;
+		LocalDate then = LocalDate.of(birthdayYear, birthdayMonth, birthdayDay);
+        return (byte)Period.between(then, now).getYears();
 	}
+	public void addNewVisitedPlace(String visitedPlace)
+	{
+		if(visitedPlaces == null)
+		{
+			visitedPlaces = new String[1];
+        }
+		else
+		{
+			visitedPlaces = Arrays.copyOf(visitedPlaces, visitedPlaces.length + 1);
+        }
+        visitedPlaces[visitedPlaces.length - 1] = visitedPlace;
+    }
 	
 	public String getPresentationStory() {
 		StringBuilder sb = new StringBuilder();
-		return null;
+		int	age = getAge();
+		sb.append("Full name: ");
+		sb.append(getFullName());
+		sb.append(" Age: ");
+		sb.append(age);
+		sb.append(" ");
+		if (age < 18) {
+			sb.append("Child");
+		}
+		else if (age > 18 && age < 60) {
+			sb.append("Adult");
+		}
+		else {
+			sb.append("Senior");
+		}
+		sb.append(" Born: ");
+		sb.append(getBirthdayDateAsString());
+		sb.append(" in ");
+		sb.append(getPlaceOfBirth());
+		sb.append(" Visited places: ");
+		for(String visitedPlace: visitedPlaces)
+		{
+			sb.append(visitedPlace.concat(" "));
+		}
+		sb.append("Facebook friends: ");
+		int	friends = getFacebookFriendsQuantity();
+		sb.append(friends);
+		sb.append(" ");
+		if (friends == 0)
+		{
+			sb.append("no friends");
+		}
+		else if(friends < 100)
+		{
+			sb.append("Small amount of friends");
+		}
+		else if(friends > 100 && friends < 1000)
+		{
+			sb.append("Medium amount of friends");
+		}
+		else
+		{
+			sb.append("Big amount of friends");
+		}
+		return sb.toString();
 	}
 
 	public String getFirstName() {
