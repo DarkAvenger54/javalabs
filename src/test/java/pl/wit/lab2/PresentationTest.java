@@ -5,9 +5,8 @@ import org.junit.jupiter.api.Test;
 
 public class PresentationTest
 {
-
     @Test
-    void getFullNameTest()
+    public void getFullNameTest()
     {
         //arrange
         Presentation willSmith = new Presentation("Will", "Smith", (byte) 25, (byte) 9, (short) 1968);
@@ -17,7 +16,7 @@ public class PresentationTest
         Assertions.assertEquals("Will Smith", fullname);
     }
     @Test
-    void getBirthdayDateAsStringTest1()
+    public void getBirthdayDateAsStringTest1()
     {
         //arrange
         Presentation tylerDurden = new Presentation("Tyler", "Durden", (byte) 1, (byte) 1, (short) 1999);
@@ -27,7 +26,7 @@ public class PresentationTest
         Assertions.assertEquals("01.01.1999", birthdayDate);
     }
     @Test
-    void getBirthdayDateAsStringTest2()
+    public void getBirthdayDateAsStringTest2()
     {
         //arrange
         Presentation willSmith = new Presentation("Will", "Smith", (byte) 25, (byte) 9, (short) 1968);
@@ -37,7 +36,7 @@ public class PresentationTest
         Assertions.assertEquals("25.09.1968", birthdayDate);
     }
     @Test
-    void getAgeTest()
+    public void getAgeTest()
     {
         //arrange
         Presentation willSmith = new Presentation("Will", "Smith", (byte) 25, (byte) 9, (short) 1968);
@@ -47,7 +46,7 @@ public class PresentationTest
         Assertions.assertEquals((byte) 56, years);
     }
     @Test
-    void addNewVisitedPlaceTest()
+    public void addNewVisitedPlaceTest()
     {
         //arrange
         Presentation willSmith = new Presentation("Will", "Smith", (byte) 25, (byte) 9, (short) 1968);
@@ -60,7 +59,7 @@ public class PresentationTest
         Assertions.assertArrayEquals(new String[]{"New York"}, tylerDurden.getVisitedPlaces());
     }
     @Test
-    void getPresentationStoryTest1()
+    public void getPresentationStoryTest1()
     {
         Presentation willSmith = new Presentation("Will", "Smith", (byte) 25, (byte) 9, (short) 1968);
         willSmith.setVisitedPlaces(new String[]{"Warsaw", "Los Angeles"});
@@ -71,7 +70,7 @@ public class PresentationTest
         Assertions.assertEquals("Full name: Will Smith Age: 56 Adult Born: 25.09.1968 in New York Visited places: Warsaw Los Angeles Facebook friends: 100 Big amount of friends", story);
     }
     @Test
-    void getPresentationStoryTest2()
+    public void getPresentationStoryTest2()
     {
         Presentation tylerDurden = new Presentation("Tyler", "Durden", (byte) 1, (byte) 1, (short) 1999);
         tylerDurden.setPlaceOfBirth("New York");
