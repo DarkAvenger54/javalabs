@@ -25,6 +25,8 @@ public class StudentDemo extends AbstractDemo {
 	public void addPoints(String name, byte mark) throws PersonException {
 		if(name != null && !name.isEmpty() && mark >= 0) {
 			mapPoints.put(name,mark);
+			logDebug("Dodano punkty do mapy: " + name + " " + mark + " ");
+			logTrace("Dodano kryterium: " + name + ", liczba punktów: " + mark + " ");
 		}
 		else {
 			throw new PersonException("Bledne kryterium lub ocena");

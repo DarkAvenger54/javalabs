@@ -61,7 +61,7 @@ public abstract class AbstractDemo implements IDemoLogger{
 
 	}
 	public String getAdditionalInfo() {
-		return getPersonType().getPlName().concat(" ").concat(getFullName());
+			return getPersonType().getPlName().concat(" ").concat(getFullName());
 	}
 	
 	public String getFullName() {

@@ -25,3 +25,25 @@
 2025-04-08 16:09:59 [main] INFO  pl.wit.lab2.Lab2SetAndMapExample - Ford, 
 2025-04-08 16:09:59 [main] INFO  pl.wit.lab2.Lab2SetAndMapExample - Toyota=200,
 2025-04-08 16:09:59 [main] INFO  pl.wit.lab2.Lab2SetAndMapExample - Ford=250,
+2025-04-08 17:05:20 [main] INFO  pl.wit.lab2.Lab2SetAndMapExample - Toyota, 
+2025-04-08 17:05:20 [main] INFO  pl.wit.lab2.Lab2SetAndMapExample - Ford, 
+2025-04-08 17:05:21 [main] INFO  pl.wit.lab2.Lab2SetAndMapExample - Toyota=200,
+2025-04-08 17:05:21 [main] INFO  pl.wit.lab2.Lab2SetAndMapExample - Ford=250,
+2025-05-05 23:11:16 [main] DEBUG pl.wit.lab3.StudentDemo - Dodano punkty do mapy: Homework 8student John Doe
+2025-05-05 23:11:16 [main] TRACE pl.wit.lab3.StudentDemo - Dodano kryterium: Homework, liczba punktów: 8, osoba: John Doestudent John Doe
+2025-05-05 23:11:16 [main] DEBUG pl.wit.lab3.StudentDemo - Dodano punkty do mapy: Exam 15student John Doe
+2025-05-05 23:11:16 [main] TRACE pl.wit.lab3.StudentDemo - Dodano kryterium: Exam, liczba punktów: 15, osoba: John Doestudent John Doe
+2025-05-05 23:11:16 [main] DEBUG pl.wit.lab3.StudentDemo - Dodano punkty do mapy: Attendance 10student John Doe
+2025-05-05 23:11:16 [main] TRACE pl.wit.lab3.StudentDemo - Dodano kryterium: Attendance, liczba punktów: 10, osoba: John Doestudent John Doe
+2025-05-05 23:12:07 [main] DEBUG pl.wit.lab3.StudentDemo - Dodano punkty do mapy: Homework 8student John Doe
+2025-05-05 23:12:07 [main] TRACE pl.wit.lab3.StudentDemo - Dodano kryterium: Homework, liczba punktów: 8, osoba: John Doestudent John Doe
+2025-05-05 23:12:07 [main] DEBUG pl.wit.lab3.StudentDemo - Dodano punkty do mapy: Exam 15student John Doe
+2025-05-05 23:12:07 [main] TRACE pl.wit.lab3.StudentDemo - Dodano kryterium: Exam, liczba punktów: 15, osoba: John Doestudent John Doe
+2025-05-05 23:12:07 [main] DEBUG pl.wit.lab3.StudentDemo - Dodano punkty do mapy: Attendance 10student John Doe
+2025-05-05 23:12:07 [main] TRACE pl.wit.lab3.StudentDemo - Dodano kryterium: Attendance, liczba punktów: 10, osoba: John Doestudent John Doe
+2025-05-05 23:13:30 [main] DEBUG pl.wit.lab3.StudentDemo - Dodano punkty do mapy: Homework 8 student John Doe
+2025-05-05 23:13:30 [main] TRACE pl.wit.lab3.StudentDemo - Dodano kryterium: Homework, liczba punktów: 8 student John Doe
+2025-05-05 23:13:30 [main] DEBUG pl.wit.lab3.StudentDemo - Dodano punkty do mapy: Exam 15 student John Doe
+2025-05-05 23:13:30 [main] TRACE pl.wit.lab3.StudentDemo - Dodano kryterium: Exam, liczba punktów: 15 student John Doe
+2025-05-05 23:13:30 [main] DEBUG pl.wit.lab3.StudentDemo - Dodano punkty do mapy: Attendance 10 student John Doe
+2025-05-05 23:13:30 [main] TRACE pl.wit.lab3.StudentDemo - Dodano kryterium: Attendance, liczba punktów: 10 student John Doe

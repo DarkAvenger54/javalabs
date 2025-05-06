@@ -35,6 +35,10 @@ public class Presentation {
 	public Presentation(String firstName,String lastName,byte birthdayDay,byte birthdayMonth,short birthdayYear) {
 		//wywołanie konstruktora 2-argumentowego
 		this(firstName, lastName);
+		if (birthdayYear < 1900)
+		{
+			throw new IllegalArgumentException("Year must be >= 1900");
+		}
 		//dalsza inicjalizacja
 		this.birthdayDay = birthdayDay;
 		this.birthdayMonth = birthdayMonth;
